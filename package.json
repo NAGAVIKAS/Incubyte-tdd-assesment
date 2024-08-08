@@ -21,5 +21,8 @@
   "homepage": "https://github.com/NAGAVIKAS/Incubyte-tdd-assesment#readme",
   "publishConfig": {
     "Naga Vikas:registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
