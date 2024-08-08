@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/NAGAVIKAS/Incubyte-tdd-assesment/issues"
   },
-  "homepage": "https://github.com/NAGAVIKAS/Incubyte-tdd-assesment#readme"
+  "homepage": "https://github.com/NAGAVIKAS/Incubyte-tdd-assesment#readme",
+  "publishConfig": {
+    "Naga Vikas:registry": "https://npm.pkg.github.com"
+  }
 }
