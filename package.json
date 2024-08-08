@@ -4,7 +4,8 @@
   "description": "assesment repo for the incubyte company",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0"
+    "start": "node index.js",
+    "test": "jest --watchAll --coverage"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,6 @@
   },
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "dependencies": {}
 }
