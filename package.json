@@ -1,0 +1,22 @@
+{
+  "name": "incubyte-tdd-assesment",
+  "version": "1.0.0",
+  "description": "assesment repo for the incubyte company",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NAGAVIKAS/Incubyte-tdd-assesment.git"
+  },
+  "keywords": [
+    "incubyte"
+  ],
+  "author": "Naga Vikas Pilladi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NAGAVIKAS/Incubyte-tdd-assesment/issues"
+  },
+  "homepage": "https://github.com/NAGAVIKAS/Incubyte-tdd-assesment#readme"
+}
