@@ -1,7 +1,8 @@
 var calculator = {
     add: function(inputString) {
         let numbers = inputString.split(',');
-        return parseInt(numbers[0] || 0) + parseInt(numbers[1] || 0);
+        let sum = numbers.reduce((res, num) => res + parseInt(num || 0), 0);
+        return sum;
     }
 };
 
