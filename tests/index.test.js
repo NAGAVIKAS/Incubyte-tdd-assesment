@@ -49,6 +49,7 @@ describe('calculator', () => {
 
   describe('ignore numbers greater than 1000', () => {
     checkSum('//;\n1,23;456\n7892',480);
+    checkSum('123,1001,1000,34',1157);
   })
 
   function checkSum(inputString,output) {

@@ -29,7 +29,7 @@ var calculator = {
     },
     getDelimitedNumbers: function(numbersDelimited, delimiters) {
         if(delimiters.length === 0) {
-            let numbersFiltered = numbersDelimited.filter((num) => num.length > 0 && num.length < 4);
+            let numbersFiltered = numbersDelimited.filter((num) => num.length > 0 && parseInt(num) < 1001);
             return numbersFiltered;
         }
         var delimiter = delimiters.pop();
