@@ -27,6 +27,26 @@ describe('calculator', () => {
     checkSum('//;\n1;2',3);
   });
 
+  describe('negative numbers', () => {
+    var errorCaught = null;
+    try {
+      calculator.add('-1\n3,-26');
+    }
+    catch (err) {
+      errorCaught = err;
+    }
+
+    test('throw an exception', () => {
+      expect(errorCaught).not.toBe(null);
+    });
+    test('include the first invalid negative term in the exception', () => {
+      expect(errorCaught.indexOf('-1')).not.toBe(-1);
+    });
+    test('include the second invalid negative term in the exception', () => {
+      expect(errorCaught.indexOf('-26')).not.toBe(-1);
+    });
+  });
+
   function checkSum(inputString,output) {
     test(`evaluate "${inputString.replace(/\n/g,'\\n')}" to ${output}`, () => {
       expect(calculator.add(inputString)).toBe(output);

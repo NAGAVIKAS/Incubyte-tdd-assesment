@@ -1,7 +1,13 @@
 var calculator = {
     add: function(inputString) {
         let numbers = this.getNumbers(inputString);
+        this.checkNegative(numbers);
         return this.getSum(numbers);
+    },
+    checkNegative: function(numbers) {
+        var negativeNumbers = numbers.filter((num) => parseInt(num) < 0);
+        if(negativeNumbers.length > 0)
+            throw "negative numbers, " + negativeNumbers.join(', ') + "are not allowed";
     },
     getNumbers: function(inputString) {
         var delimiters = [',','\n'];
