@@ -18,6 +18,11 @@ describe('calculator', () => {
     checkSum("88,36,111,8,42,15",300);
   });
 
+  describe('handle new line between numbers', () => {
+    checkSum("1\n2\n3",6);
+    checkSum("1,2\n3,4\n5",15);
+  });
+
   function checkSum(inputString,output) {
     test(`evaluate "${inputString}" to ${output}`, () => {
       expect(calculator.add(inputString)).toBe(output);
