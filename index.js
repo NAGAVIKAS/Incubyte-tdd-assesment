@@ -22,7 +22,7 @@ var calculator = {
         return /^\/\//.test(inputString);
     },
     getCustomDelimiter: function(inputString) {
-        return inputString.charAt(2);
+        return inputString.split('\n')[0].substring(2);
     },
     removeFirstLine: function(inputString) {
         return inputString.substring(inputString.indexOf('\n') + 1);
