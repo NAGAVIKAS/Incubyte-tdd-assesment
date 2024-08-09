@@ -5,7 +5,21 @@ var calculator = {
     },
     getNumbers: function(inputString) {
         var delimiters = [',','\n'];
+
+        if(this.customDelimiterExists(inputString)){
+            delimiters.push(this.getCustomDelimiter(inputString));
+            inputString = this.removeFirstLine(inputString);
+        }
         return this.getDelimitedNumbers([inputString],delimiters);
+    },
+    customDelimiterExists: function(inputString) {
+        return /^\/\//.test(inputString);
+    },
+    getCustomDelimiter: function(inputString) {
+        return inputString.charAt(2);
+    },
+    removeFirstLine: function(inputString) {
+        return inputString.substring(inputString.indexOf('\n') + 1);
     },
     getDelimitedNumbers: function(numbersDelimited, delimiters) {
         if(delimiters.length === 0) {
