@@ -24,7 +24,7 @@ describe('calculator', () => {
   });
 
   describe('custom delimiter', () => {
-    checkSum('//;\n1;2');
+    checkSum('//;\n1;2',3);
   });
 
   function checkSum(inputString,output) {
