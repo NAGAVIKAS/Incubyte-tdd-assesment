@@ -1,7 +1,11 @@
 const calculator = require('../index');
 
 describe('calculator',()=>{
-  test('evaluate "" to 0', () => {
-    expect(calculator.add("")).toBe(0);
-  });
+  checkSum("",0);
+
+  function checkSum(inputString,output) {
+    test(`evaluate "${inputString}" to ${output}`, () => {
+      expect(calculator.add(inputString)).toBe(output);
+    });
+  }
 });
