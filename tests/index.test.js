@@ -13,6 +13,11 @@ describe('calculator', () => {
     checkSum("88,36",124);
   });
 
+  describe('any amount of numbers testcase', () => {
+    checkSum("1,2,3,4",10);
+    checkSum("88,36,111,8,42,15",300);
+  });
+
   function checkSum(inputString,output) {
     test(`evaluate "${inputString}" to ${output}`, () => {
       expect(calculator.add(inputString)).toBe(output);
