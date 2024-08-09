@@ -29,6 +29,10 @@ describe('calculator', () => {
     describe('multi-character custom delimiter', () => {
       checkSum('//del\n12del2,34del6\n5',59);
     });
+    
+    describe('allow multiple custom delimiters', () => {
+      checkSum('//[*][@]\n1*2,3@4',10);
+    })
   });
 
   describe('negative numbers', () => {
