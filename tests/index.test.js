@@ -23,6 +23,10 @@ describe('calculator', () => {
     checkSum("1,2\n3,4\n5",15);
   });
 
+  describe('custom delimiter', () => {
+    checkSum('//;\n1;2',3);
+  });
+
   function checkSum(inputString,output) {
     test(`evaluate "${inputString.replace(/\n/g,'\\n')}" to ${output}`, () => {
       expect(calculator.add(inputString)).toBe(output);
