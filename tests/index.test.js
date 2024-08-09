@@ -32,6 +32,10 @@ describe('calculator', () => {
     
     describe('allow multiple custom delimiters', () => {
       checkSum('//[*][@]\n1*2,3@4',10);
+    });
+
+    describe('handle multiple multi-character custom delimiters', () => {
+      checkSum('//[***][@@@]\n1***2\n3@@@4,5',15);
     })
   });
 
