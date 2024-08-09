@@ -24,7 +24,7 @@ describe('calculator', () => {
   });
 
   function checkSum(inputString,output) {
-    test(`evaluate "${inputString}" to ${output}`, () => {
+    test(`evaluate "${inputString.replace(/\n/g,'\\n')}" to ${output}`, () => {
       expect(calculator.add(inputString)).toBe(output);
     });
   }
