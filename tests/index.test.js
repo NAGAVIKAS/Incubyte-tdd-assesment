@@ -47,6 +47,10 @@ describe('calculator', () => {
     });
   });
 
+  describe('ignore numbers greater than 1000', () => {
+    checkSum('//;\n1,23;456\n7892',480);
+  })
+
   function checkSum(inputString,output) {
     test(`evaluate "${inputString.replace(/\n/g,'\\n')}" to ${output}`, () => {
       expect(calculator.add(inputString)).toBe(output);
