@@ -1,5 +1,7 @@
-function msg(inputMsg) { 
-    return 'hi '+inputMsg; 
-}
+var calculator = {
+    add: function() {
+        return 0;
+    }
+};
 
-module.exports = msg;
+module.exports = calculator;

@@ -1,5 +1,7 @@
-const msg = require('../index');
+const calculator = require('../index');
 
-test('returns hi vikas', () => {
-  expect(msg('vikas')).toBe('hi vikas');
+describe('calculator',()=>{
+  test('evaluate "" to 0', () => {
+    expect(calculator.add("")).toBe(0);
+  });
 });
